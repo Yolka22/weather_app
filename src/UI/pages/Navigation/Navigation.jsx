@@ -6,7 +6,7 @@ const Navigation = () => {
     <>
       <nav>
             <Link to="CityWeather" className="Link">City Weather</Link>
-            
+            <Link to="WeatherMap" className="Link">Map</Link>
       </nav>
       
 

@@ -7,7 +7,6 @@ import Rainbars from "../../Rainbars/Rainbars";
 import SunriseSunset from "../../SunriseSunset/SunriseSunset";
 import { EmptyRainbars } from "../../Rainbars/Rainbars";
 import DateTranslate from "../../../modules/DateTranslate/DateTranslate";
-
 const CityWeather = () => {
   const [CurrentCity, setCity] = useState("");
   const [DayliInfo, setInfo] = useState(null);
@@ -42,6 +41,7 @@ const CityWeather = () => {
           <input type="text" onChange={(e) => setCity(e.target.value)} placeholder="Search Location Here" />
           <button onClick={search}>Search</button>
         </div>
+        
       </div>
       {DayliInfo ? DayliInfo : <EmptyWeatherForecast />}
       </main>

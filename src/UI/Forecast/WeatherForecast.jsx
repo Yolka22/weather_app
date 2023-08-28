@@ -58,6 +58,12 @@ const WeatherForecast = ({ weather }) => {
         <InfoBlock
           props={{ title: "Pressure", body: `${pressure_mb * 0.75} mmHg` }}
         />
+        <InfoBlock
+          props={{ title: "Humidity", body: `${weather.current.humidity} %` }}
+        />
+        <InfoBlock
+          props={{ title: weather.current.condition.text, body: <img src={weather.current.condition.icon}></img> }}
+        />
       </div>
       <div className="lineChartContainer">
         <LineChart chartData={chartData} />
@@ -94,6 +100,8 @@ const EmptyWeatherForecast = () => {
         <InfoBlock props={{ title: "Rain Chance", body: `${0}%` }} />
         <InfoBlock props={{ title: "Temperature C", body: `${0} C` }} />
         <InfoBlock props={{ title: "Pressure", body: `${0 * 0.75} mmHg` }} />
+        <InfoBlock props={{ title: "Condition", body: " "}} />
+        <InfoBlock props={{ title: "Humidity", body: "0%"}} />
       </div>
       <div className="lineChartContainer">
         <LineChart chartData={chartData} />
